@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Hage from "./Hage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const a = 2,
+    b = 4;
+  const [hage, setHair] = useState(0);
+
+  return <div>{a == 2 && <Hage yyy={hage} setHair={setHair} />}</div>;
+}
+
+export function add(a, b) {
+  return a + b;
 }
 
 export default App;
